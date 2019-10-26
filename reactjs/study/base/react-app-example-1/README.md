@@ -1,5 +1,5 @@
 # React
-> 해당 샘플코드는 ...에 있습니다.
+> 해당 샘플코드는 github에 제공되어 있습니다. [샘플코드 바로가기](https://github.com/bkjeon1614/javascript-study/tree/master/reactjs/study/base)
 
 ## React?
 facebook.com의 UI를 더 잘만들기 위해서 facebook에서 만든 javascript UI 라이브러리 [공식 홈페이지](https://reactjs.org)
