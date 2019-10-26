@@ -1,2 +1,2 @@
-# javascript-study
-javascript-study
+# javascript-document
+javascript document ..
