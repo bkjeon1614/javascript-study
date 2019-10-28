@@ -409,14 +409,14 @@ export default PageNav;
 > 만약 위의 코드를 concat이 아닌 push를 사용할경우 원본과 추가된 값을 비교할 수 없으므로 계속 무분별한 render가 발생하여 성능저하가 되므로 concat을 사용하자.
 
 ## immutable(불변성 -> 즉, 원본이 바뀌지 않는다.)
-불변성을 갖고있는 함수에 대해 설명한다.
+불변성을 갖고있는 함수에 대해 설명한다.  
 
-// 배열인 경우
-Array.from(a);
+// 배열인 경우  
+Array.from(a);  
 ![reactjs-5-5](./img/reactjs-5-5.PNG)  
 
-// 객체인 경우
-Object.assign({},a);
+// 객체인 경우  
+Object.assign({},a);  
 ![reactjs-5-6](./img/reactjs-5-6.PNG) 
 
 > javascript의 배열의 문제는 push는 원본을 바꾸고 concat은 원본을 복제한애를 바꾼다. 즉, 명령의 일관성이 떨어진다. -> 원본을 바꾸지 않으려면 immutable-js를 활용하면 좋다.
