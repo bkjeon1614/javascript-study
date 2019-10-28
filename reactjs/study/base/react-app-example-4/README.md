@@ -1,7 +1,7 @@
 # Event
 
 ## 이벤트 설치
-아래 이미지에서 색칠된 제목인 modify title을 클릭했을 떄 PageHeader태그 바깥쪽에있는 App의 state를 바꾸는 작업을 시작하자.
+아래 이미지에서 색칠된 제목인 modify title을 클릭했을 떄 PageHeader태그 바깥쪽에있는 App의 state를 바꾸는 작업을 시작하자.  
 ![reactjs-4-1](./img/reactjs-4-1.PNG)
 
 우선 이해를 돕기 위하여 PageHeader의 Component를 풀어서 그걸 그대로 App에 도입하여 이벤트를 구현하자.
