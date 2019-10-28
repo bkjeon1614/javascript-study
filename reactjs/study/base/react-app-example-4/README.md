@@ -410,3 +410,16 @@ bind 함수의 특성을 이해하자
     }.bind(this, data[i].id)}
 ```
 `data-id를 사용안하고 bind의 두번째 인자로 해당 값을 넣어주면 해당 함수의 두번쨰 인자로 들어온 이 값을 첫번째 매개변수의 값으로 넣어주고 기존에 있었던 값은 뒤로 한칸 씩 밀려난다. 둘 중 편한것으로 사용하면 된다.`
+
+
+## props와 state의 관계
+
+Props
+- props are **read-only**
+- props **can not be modified**
+  
+State
+- state changes **can be asynchronous**
+- state **can be modified** using this.setState
+
+![reactjs-4-5](./img/reactjs-4-5.PNG)
