@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      mode: 'welcome',
+      mode:'read',
+      selected_content_id:2,
       header: {title:'modify title', subTitle: 'modify subTitle'},
       contents:[
         {id:1, title:"modify HTML", subTitle:'modify HTML subTitle'},
@@ -23,17 +24,36 @@ class App extends Component {
       _title = this.state.welcome.title;
       _subTitle = this.state.welcome.subTitle;
     } else if (this.state.mode === 'read') {
-      _title = this.state.contents[0].title;
-      _subTitle = this.state.contents[0].subTitle;
+      var i = 0;
+      while(i < this.state.contents.length) {
+        var data = this.state.contents[i];
+        if (data.id === this.state.selected_content_id) {
+          _title = data.title;
+          _subTitle = data.subTitle;
+          break;
+        }
+        i = i + 1;
+      }
     }
     return (
       <div className="App">
         <PageHeader 
           title={this.state.header.title} 
           subTitle={this.state.header.subTitle}
+          onChangePage={function(){
+            this.setState({mode: 'welcome'});
+          }.bind(this)}
         ></PageHeader>
-        <PageNav data={this.state.contents}></PageNav>
-        <PageArticle title="Title Article" contents="Contents Article"></PageArticle>
+        <PageNav 
+          onChangePage={function(id){
+            this.setState({
+              mode:'read',
+              selected_content_id:Number(id)
+            });
+          }.bind(this)}
+          data={this.state.contents}
+        ></PageNav>
+        <PageArticle title={_title} contents={_subTitle}></PageArticle>
       </div>
     );
   }

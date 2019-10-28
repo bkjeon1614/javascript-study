@@ -184,3 +184,44 @@ state를 여러개의 값을 사용했을때의 사용법을 알아보자.
 이렇게 하면 에러가 사라진다.
 
 > 결론적으론 App의 입장에서는 state라는 내부정보를 사용했고 그것을 자식한테 전달할때는 props라는 것을 통해서 전달하고 있다. 그러므로 App의 입장에서는 PageNav가 어떻게 동작하는지 알 필요가 없다. data라고 하는 props로는 어떤 형태의 정보를 전달하면 되는지만 즉, 사용자의 입장에서 알아야되는 부분만 알면 된다.
+
+그리고 아래처럼 App.js의 코드를 수정해보고 페이지를 확인하자.
+```
+    ...
+        class App extends Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    mode: 'welcome',
+                    header: {title:'modify title', subTitle: 'modify subTitle'},
+                    contents:[
+                        {id:1, title:"modify HTML", subTitle:'modify HTML subTitle'},
+                        {id:2, title:"modify React", subTitle:'modify React subTitle'},
+                        {id:3, title:"modify Javascript", subTitle:'modify HTML Javascript'}
+                    ]
+                }
+            }
+            render() {
+                // mode가 welcome일 경우와 read일 경우에 표시되는 내용을 확인하자.
+                var _title, _subTitle = null;
+                if (this.state.mode === 'welcome') {
+                    _title = this.state.welcome.title;
+                    _subTitle = this.state.welcome.subTitle;
+                } else if (this.state.mode === 'read') {
+                    _title = this.state.contents[0].title;
+                    _subTitle = this.state.contents[0].subTitle;
+                }
+                return (
+                    <div className="App">
+                        <PageHeader 
+                        title={this.state.header.title} 
+                        subTitle={this.state.header.subTitle}
+                        ></PageHeader>
+                        <PageNav data={this.state.contents}></PageNav>
+                        <PageArticle title="Title Article" contents="Contents Article"></PageArticle>
+                    </div>
+                );
+            }
+        }
+    ...
+```
