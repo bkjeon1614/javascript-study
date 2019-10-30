@@ -205,8 +205,8 @@ state를 여러개의 값을 사용했을때의 사용법을 알아보자.
                 // mode가 welcome일 경우와 read일 경우에 표시되는 내용을 확인하자.
                 var _title, _subTitle = null;
                 if (this.state.mode === 'welcome') {
-                    _title = this.state.welcome.title;
-                    _subTitle = this.state.welcome.subTitle;
+                    _title = this.state.header.title;
+                    _subTitle = this.state.header.subTitle;
                 } else if (this.state.mode === 'read') {
                     _title = this.state.contents[0].title;
                     _subTitle = this.state.contents[0].subTitle;
@@ -225,3 +225,10 @@ state를 여러개의 값을 사용했을때의 사용법을 알아보자.
         }
     ...
 ```
+
+
+## 완성코드
+[react-app-example-3](https://github.com/bkjeon1614/javascript-study/tree/master/reactjs/study/base/react-app-example-3)
+
+## 참고
+inflearn.com/course/react-생활코딩#

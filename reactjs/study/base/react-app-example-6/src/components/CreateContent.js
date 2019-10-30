@@ -12,7 +12,6 @@ class CreateContent extends Component {
                     e.target.title.value,
                     e.target.subTitle.value
                   );
-                  alert('Submit!!!!');
                 }.bind(this)}
               >
                 <p><input type="text" name="title" placeholder="title"></input></p>

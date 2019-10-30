@@ -21,8 +21,8 @@ class App extends Component {
   render() {
     var _title, _subTitle = null;
     if (this.state.mode === 'welcome') {
-      _title = this.state.welcome.title;
-      _subTitle = this.state.welcome.subTitle;
+      _title = this.state.header.title;
+      _subTitle = this.state.header.subTitle;
     } else if (this.state.mode === 'read') {
       var i = 0;
       while(i < this.state.contents.length) {

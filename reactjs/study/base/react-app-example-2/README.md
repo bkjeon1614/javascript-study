@@ -361,6 +361,8 @@ App.js에는 이전에 작업하였던 여러가지의 Component가 선언되어
 ![reactjs-2-7](./img/reactjs-2-7.PNG)  
 > 즉, 이렇게되면 코드가 간결화되고 필요한 컴포넌트를 찾아 사용하기가 수월하다. 그리고 App.js가 아니라 다른곳에서도 해당 Component를 갖다 사용할 수 있다.
 
+## 완성코드
+[react-app-example-2](https://github.com/bkjeon1614/javascript-study/tree/master/reactjs/study/base/react-app-example-2)
 
 ## 참고
 inflearn.com/course/react-생활코딩#

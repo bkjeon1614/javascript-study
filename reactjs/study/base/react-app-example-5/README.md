@@ -182,8 +182,8 @@ export default CreateContent;
     render() {
       var _title, _subTitle, _article = null;
       if (this.state.mode === 'welcome') {
-        _title = this.state.welcome.title;
-        _subTitle = this.state.welcome.subTitle;
+        _title = this.state.header.title;
+        _subTitle = this.state.header.subTitle;
         _article = <ReadContent title={_title} contents={_subTitle}></ReadContent>
       } else if (this.state.mode === 'read') {
         var i = 0;
@@ -420,3 +420,11 @@ Object.assign({},a);
 ![reactjs-5-6](./img/reactjs-5-6.PNG) 
 
 > javascript의 배열의 문제는 push는 원본을 바꾸고 concat은 원본을 복제한애를 바꾼다. 즉, 명령의 일관성이 떨어진다. -> 원본을 바꾸지 않으려면 immutable-js를 활용하면 좋다.
+
+
+## 완성코드
+[react-app-example-5](https://github.com/bkjeon1614/javascript-study/tree/master/reactjs/study/base/react-app-example-5)
+
+
+## 참고
+inflearn.com/course/react-생활코딩#

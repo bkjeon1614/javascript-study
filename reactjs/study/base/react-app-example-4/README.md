@@ -317,8 +317,8 @@ PageHeader.js 코드또한 아래와 같이 수정한다.
         render() {
             var _title, _subTitle = null;
             if (this.state.mode === 'welcome') {
-                _title = this.state.welcome.title;
-                _subTitle = this.state.welcome.subTitle;
+                _title = this.state.header.title;
+                _subTitle = this.state.header.subTitle;
             } else if (this.state.mode === 'read') {
                 var i = 0;
                 while(i < this.state.contents.length) {
@@ -423,3 +423,11 @@ State
 - state **can be modified** using this.setState
 
 ![reactjs-4-5](./img/reactjs-4-5.PNG)
+
+
+## 완성코드
+[react-app-example-4](https://github.com/bkjeon1614/javascript-study/tree/master/reactjs/study/base/react-app-example-4)
+
+
+## 참고
+inflearn.com/course/react-생활코딩#

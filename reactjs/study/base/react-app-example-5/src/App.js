@@ -24,8 +24,8 @@ class App extends Component {
   render() {
     var _title, _subTitle, _article = null;
     if (this.state.mode === 'welcome') {
-      _title = this.state.welcome.title;
-      _subTitle = this.state.welcome.subTitle;
+      _title = this.state.header.title;
+      _subTitle = this.state.header.subTitle;
       _article = <ReadContent title={_title} contents={_subTitle}></ReadContent>
     } else if (this.state.mode === 'read') {
       var i = 0;
