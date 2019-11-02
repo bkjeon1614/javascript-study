@@ -373,7 +373,7 @@ export default App;
 ## Event
 모든 Event는 카멜케이스로 작성되어야 한다.(ex: onClick ..)
 
-버튼을 하나 만들어서 event가 실행되게하자.
+버튼을 하나 만들어서 event가 실행되게하자.  
 [App.tsx]
 ```
 import * as React from 'react';
@@ -466,7 +466,7 @@ React.PropTypes를 더이상 함께 제공해 주지 않는다.
 - Typescript
   - https://www.typescriptlang.org
 
-defaultProps 사용법(class)
+defaultProps 사용법(class)  
 [App.tsx]
 ```
 import * as React from 'react';
