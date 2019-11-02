@@ -171,5 +171,5 @@ tslint.json: ts-lint-loader를 돌릴 때 어떤 규칙에 맞게 lint를 처리
 
 
 ## 참조
-https://www.inflearn.com/course/react-with-typescript#
+https://www.inflearn.com/course/react-with-typescript#  
 https://medium.com/@ljs0705
