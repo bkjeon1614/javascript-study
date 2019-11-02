@@ -225,6 +225,7 @@ export default App;
 위의 이미지의 console.log를 확인해보면 lifecycle을 확인할 수 있다.  
 
 > 여기서 일반적으로 state를 설정할 때 빼고는 constructor에다가 다음 행동을 적어놓지 않는다. 왜냐하면 constructor는 제일 초반에 불려오기 때문에 마운트가 된 다음에 일을 진행시키는게 더 일반적이라고 한다. 그러한 점을 고려해서 render가 다 됬을 때 setInterval을 돌려보도록 코드를 수정하자.  
+
 [App.tsx]
 ```
 import * as React from 'react';
