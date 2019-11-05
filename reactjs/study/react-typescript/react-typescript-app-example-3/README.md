@@ -155,7 +155,8 @@ export default App;
   },
   "rules": {
     "no-console": false,  // console.log 사용
-    "member-access": [true, "no-public"]  // 접근제어자 관련 설정
+    "member-access": [true, "no-public"],  // 접근제어자 관련 설정
+    "jsx-no-lambda": false
   }
 }
 ```
