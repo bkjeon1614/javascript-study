@@ -32,7 +32,7 @@ yarn remove @types/immutable @types/redux
 
 들어가기전에 Redux를 사용하는 어플리케이션을 구축하다 보면 기능별로 여러 개의 액션 타입과, 액션, 리듀서 한 세트를 만들어야 한다. 이들은 관습적으로 여러 개의 폴더로 나누어져서, 하나의 기능을 수정할 때는 이 기능과 관련된 여러 개의 파일을 수정해야 하는 일이 생긴다. 여기서 불편함을 느껴 나온 것이 Ducks 구조이다.
 
-[Example]
+[Example]  
 ```
 // widgets.js
 
@@ -78,8 +78,8 @@ Ducks 구조에는 몇 가지 규칙이 있다.
 > 리덕스 Ducks 구조는 액션 타입, 액션 생성 함수, 리듀서를 한 파일에 작성하는 것
 
 
-## 카운터 컴포넌트의 Redux 모듈 작성
-[src/store/modules/counter.ts]
+## 카운터 컴포넌트의 Redux 모듈 작성  
+[src/store/modules/counter.ts]  
 ```
 import { createAction, handleActions } from 'redux-actions';
 
@@ -113,9 +113,9 @@ export default handleActions<ICounterState>(
 ## 스토어 생성 및 적용
 루트 리듀서를 생성하자.
 
-> 루트 리듀서란 만약 계속하여 리듀서가 여러개 존재하게 된다. 여러개의 리듀서가 있으면 리덕스의 함수 combineReducers를 사용하여 하나의 리듀서로 합쳐줄 수 있다. 이것을 루트 리듀서라고 한다.
+> 루트 리듀서란 만약 계속하여 리듀서가 여러개 존재하게 된다. 여러개의 리듀서가 있으면 리덕스의 함수 combineReducers를 사용하여 하나의 리듀서로 합쳐줄 수 있다. 이것을 루트 리듀서라고 한다.  
 
-[src/store/modules/index.ts]
+[src/store/modules/index.ts]  
 ```
 import { combineReducers } from 'redux';
 import counter, { ICounterState } from './counter';
@@ -130,8 +130,8 @@ export interface IStoreState {
 }
 ```
 
-이제 스토어를 생성하는 함수를 만들자.
-[src/store/configureStore.ts]
+이제 스토어를 생성하는 함수를 만들자.  
+[src/store/configureStore.ts]  
 ```
 import modules from './modules';
 import { createStore } from 'redux';
@@ -146,8 +146,8 @@ export default function configureStore() {
 ```
 
 위 코드는 window 객체에 원래는 REDUX_DEVTOOLS_EXTENSION 이 없으므로 에러가 날 것이다. 따라서, 우리는 타입을 강제 캐스팅 (Type Assertion) 하자. any 를 사용하면, 문법 검사 시스템에서 사용하지 말라고 토를 달 것입니다.
-any 를 자주 쓰는건 물론 좋지 않지만, 가끔씩은 이렇게 써야 하는 상황도 있습니다. 따라서, 문법 검사 설정을 변경하여 오류가 나타나지 않게 설정하자.
-[tslint.json]
+any 를 자주 쓰는건 물론 좋지 않지만, 가끔씩은 이렇게 써야 하는 상황도 있습니다. 따라서, 문법 검사 설정을 변경하여 오류가 나타나지 않게 설정하자.  
+[tslint.json]  
 ```
 ...
   "rules": {
@@ -157,8 +157,8 @@ any 를 자주 쓰는건 물론 좋지 않지만, 가끔씩은 이렇게 써야 
 ...
 ```
 
-그 다음 index.tsx에서 Provider를 통해 리덕스 스토어를 적용하자.
-[src/index.tsx]
+그 다음 index.tsx에서 Provider를 통해 리덕스 스토어를 적용하자.  
+[src/index.tsx]  
 ```
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -182,15 +182,15 @@ registerServiceWorker();
 
 ## 카운터 컨테이너 컴포넌트 생성
 만들기전에 디렉토리를 편하게 불러올 수 있게 NODE_PATH와 baseUrl 값을 설정하자.
-
-[/.env]
+  
+[/.env]  
 NODE_PATH는 최상단 디렉토리에 .env파일을 생성하여 코드를 작성
 ```
 NODE_PATH=src
 ```
 
-그 다음 타입스크립트 도구가 제대로 인식할 수 있도록 baseUrl을 설정
-[/tsconfig.json]
+그 다음 타입스크립트 도구가 제대로 인식할 수 있도록 baseUrl을 설정  
+[/tsconfig.json]  
 ```
 {
   "compilerOptions": {
@@ -206,8 +206,8 @@ NODE_PATH=src
 ```
 위의 내용이 다 완료되면 IDE와 개발 서버를 재 시작 한다.  
 
-그 다음 기존의 Counter 컴포넌트를 프리젠테이셔널 컴포넌트로서 사용하기 위해 들고있던 state와 method들을 제거하고 아래 코드로 변경하자.
-[src/components/Counter.tsx]
+그 다음 기존의 Counter 컴포넌트를 프리젠테이셔널 컴포넌트로서 사용하기 위해 들고있던 state와 method들을 제거하고 아래 코드로 변경하자.  
+[src/components/Counter.tsx]  
 ```
 import * as React from 'react';
 
@@ -229,8 +229,8 @@ const Counter: React.SFC<IProps> = ({ value, onIncrement, onDecrement }) => (
 export default Counter;
 ```
 
-컨테이너 컴포넌트를 작성하자.
-[src/containers/CounterContainer.tsx]
+컨테이너 컴포넌트를 작성하자.  
+[src/containers/CounterContainer.tsx]  
 ```
 import * as React from 'react';
 import Counter from 'components/Counter';
@@ -276,8 +276,8 @@ export default connect(
 )(CounterContainer);
 ```
 
-App에서 기존 Counter을 CounterContainer로 변경하자.
-[src/App.tsx]
+App에서 기존 Counter을 CounterContainer로 변경하자.  
+[src/App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
@@ -305,8 +305,8 @@ export default App;
 ```
 
 
-## TodoList 리덕스 모듈 생성
-[src/store/modules/todos.ts]
+## TodoList 리덕스 모듈 생성  
+[src/store/modules/todos.ts]  
 ```
 import { Record, List } from 'immutable';
 import { createAction, handleActions, Action } from 'redux-actions';
@@ -418,7 +418,7 @@ return <TodosState> state...
 ```
 이런식으로 되어있는데 이 부분은 기본적으로 state.update, state.set 등의 함수의 결과물 타입이 Map 이기 때문에 이를 다시 타입 캐스팅 해주는 것이다. (ex: window as any..) 따라서, return state…. as TodosState 와 같은 형식으로 하셔도 무방하다.  
 
-이제 만든 모듈을 combineReducers 쪽과 StoreState 에 추가하자.
+이제 만든 모듈을 combineReducers 쪽과 StoreState 에 추가하자.  
 [src/store/modules/index.ts]
 ```
 import counter, { ICounterState } from './counter';
@@ -438,9 +438,9 @@ export interface IStoreState {
 ```
 
 
-## TodoList 컴포넌트 프리젠테이셔널 컴포넌트로 전환
-TodoList의 state를 없애고 함수형 컴포넌트로 전환하자.
-[src/components/TodoList.tsx]
+## TodoList 컴포넌트 프리젠테이셔널 컴포넌트로 전환  
+TodoList의 state를 없애고 함수형 컴포넌트로 전환하자.  
+[src/components/TodoList.tsx]  
 ```
 import * as React from 'react';
 import TodoItem from './TodoItem';
@@ -495,8 +495,8 @@ const TodoList: React.SFC<IProps> = ({
 export default TodoList;
 ```
 
-TodoListContainer 생성
-[src/containers/TodoListContainer.tsx]
+TodoListContainer 생성  
+[src/containers/TodoListContainer.tsx]  
 ```
 import * as React from 'react';
 import TodoList from 'components/TodoList';
@@ -561,8 +561,8 @@ export default connect(
 )(TodoListContainer);
 ```
 
-App에서 TodoList를 TodoListContainer 로 교체
-[src/App.tsx]
+App에서 TodoList를 TodoListContainer 로 교체  
+[src/App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';

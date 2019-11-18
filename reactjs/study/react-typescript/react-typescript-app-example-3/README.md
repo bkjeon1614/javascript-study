@@ -13,7 +13,7 @@ State
 - 생성자 혹은 프로퍼티 초기 할당으로 state를 초기 할당 해줘야 한다.
 - 내부에서 변경을 하더라도 setState 함수를 이용해야 render가 호출된다.
 
-초기 세팅시 주의할 점(state 초기 할당 관련)
+초기 세팅시 주의할 점(state 초기 할당 관련)  
 [index.tsx]
 ```
 import * as React from 'react';
@@ -29,7 +29,7 @@ ReactDOM.render(
 );
 registerServiceWorker();
 ```
-
+  
 [App.tsx]
 ```
 import * as React from 'react';
@@ -58,8 +58,8 @@ class App extends React.Component<{ name: string; }, { age: number; }> {
 
 export default App;
 ```
-
-setState 사용 방법
+  
+setState 사용 방법  
 [App.tsx]
 ```
 import * as React from 'react';
@@ -141,8 +141,8 @@ export default App;
 
 
 ## Lifecycle
-원활한 개발 환경을 위하여 tslint 설정값을 수정하자.
-[tslint.json]
+원활한 개발 환경을 위하여 tslint 설정값을 수정하자.  
+[tslint.json]  
 ```
 {
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
@@ -161,8 +161,8 @@ export default App;
 }
 ```
 
-Lifecycle을 확인하기 위하여 코드 추가  
-[App.tsx]
+Lifecycle을 확인하기 위하여 코드 추가    
+[App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
@@ -226,8 +226,8 @@ export default App;
 위의 이미지의 console.log를 확인해보면 lifecycle을 확인할 수 있다.  
 
 > 여기서 일반적으로 state를 설정할 때 빼고는 constructor에다가 다음 행동을 적어놓지 않는다. 왜냐하면 constructor는 제일 초반에 불려오기 때문에 마운트가 된 다음에 일을 진행시키는게 더 일반적이라고 한다. 그러한 점을 고려해서 render가 다 됬을 때 setInterval을 돌려보도록 코드를 수정하자.  
-
-[App.tsx]
+  
+[App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
@@ -374,8 +374,8 @@ export default App;
 ## Event
 모든 Event는 카멜케이스로 작성되어야 한다.(ex: onClick ..)
 
-버튼을 하나 만들어서 event가 실행되게하자.  
-[App.tsx]
+버튼을 하나 만들어서 event가 실행되게하자.    
+[App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
@@ -467,8 +467,8 @@ React.PropTypes를 더이상 함께 제공해 주지 않는다.
 - Typescript
   - https://www.typescriptlang.org
 
-defaultProps 사용법(class)  
-[App.tsx]
+defaultProps 사용법(class)    
+[App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
@@ -554,8 +554,8 @@ const StatelessComponent: React.SFC<IAppProps> = (props) => {
 
 export default App;
 ```
-
-[index.tsx]
+  
+[index.tsx]  
 ```
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -572,9 +572,9 @@ registerServiceWorker();
 ```
 ![react-typescript-3-4](./img/react-typescript-3-4.PNG)
 
-defaultProps 사용법(function)
-[App.tsx]
-StatelessComponent에 defaultProps값을 추가해보자.
+defaultProps 사용법(function)  
+[App.tsx]  
+StatelessComponent에 defaultProps값을 추가해보자.  
 ```
 import * as React from 'react';
 import './App.css';

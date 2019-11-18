@@ -11,7 +11,7 @@ cd react-typescript-redux-example-1
 yarn start
 ```
 
-원활한 개발 환경을 위하여 tslint 설정값을 수정하자.
+원활한 개발 환경을 위하여 tslint 설정값을 수정하자.  
 [tslint.json]
 ```
 {
@@ -68,7 +68,7 @@ class Profile extends React.Component<IProps> {
 export default Profile;
 ```
 
-해당 컴포넌트를 App에서 렌더링하자.
+해당 컴포넌트를 App에서 렌더링하자.  
 [src/App.tsx]
 ```
 import * as React from 'react';
@@ -92,10 +92,10 @@ class App extends React.Component {
 export default App;
 ```
 
-실행하여 페이지를 확인해보자.
+실행하여 페이지를 확인해보자.  
 ![react-typescript-redux-example-1-1](./img/react-typescript-redux-example-1-1.PNG)  
 
-이제 해당 컴포넌트를 함수형 컴포넌트로 변경해보자.
+이제 해당 컴포넌트를 함수형 컴포넌트로 변경해보자.  
 [src/components/Profile.tsx]
 ```
 import * as React from 'react';
@@ -125,7 +125,7 @@ export default Profile;
 
 
 ## 카운터 컴포넌트 작성
-React Component의 state도 사용하는 카운터 컴포넌트를 작성하자.
+React Component의 state도 사용하는 카운터 컴포넌트를 작성하자.  
 [src/components/Counter.tsx]
 ```
 import * as React from 'react';
@@ -172,7 +172,7 @@ class Counter extends React.Component<IProps, IState> {
 export default Counter;
 ```
 
-카운터 컴포넌트를 App에 렌더링하자.
+카운터 컴포넌트를 App에 렌더링하자.  
 [src/App.tsx]
 ```
 import * as React from 'react';
@@ -198,13 +198,13 @@ class App extends React.Component {
 export default App;
 ```
 
-실행하여 카운트가 증가하는지 확인하자.
+실행하여 카운트가 증가하는지 확인하자.  
 ![react-typescript-redux-example-1-2](./img/react-typescript-redux-example-1-2.PNG)  
 
 
 ## TO Do List 작성
-할 일 목록 데이터를 관리할 수 있는 컴포넌트를 작성하자.
-  
+할 일 목록 데이터를 관리할 수 있는 컴포넌트를 작성하자.  
+    
 [src/components/TodoItem.tsx]
 ```
 import * as React from 'react';
@@ -232,9 +232,9 @@ const TodoItem: React.SFC<IProps> = ({ text, done, onToggle, onRemove }) => (
 
 export default TodoItem;
 ```
-
-[src/components/TodoList.tsx]
-컴포넌트에 만들게 되는 메소드의 파라미터에도 타입을 지정할 수 있다. (ex: ITodoItemData[])
+  
+[src/components/TodoList.tsx]  
+컴포넌트에 만들게 되는 메소드의 파라미터에도 타입을 지정할 수 있다. (ex: ITodoItemData[]) 
 ```
 import * as React from 'react';
 import TodoItem from './TodoItem';
@@ -344,8 +344,8 @@ class TodoList extends React.Component<IProps, IState> {
 
 export default TodoList;
 ```
-
-[src/App.tsx]
+  
+[src/App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
@@ -372,7 +372,7 @@ class App extends React.Component {
 export default App;
 ```
 
-실행하면 아래와 같이 확인할 수 있다.
+실행하면 아래와 같이 확인할 수 있다.  
 ![react-typescript-redux-example-1-3](./img/react-typescript-redux-example-1-3.PNG)  
 
 

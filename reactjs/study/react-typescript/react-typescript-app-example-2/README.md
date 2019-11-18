@@ -84,7 +84,7 @@ App.test.tsx
 registerServiceWorker.ts
 - pwa 서비스 워커 사용 등록
 
-ts-loader => tsconfig.json 설명
+ts-loader => tsconfig.json 설명  
 [tsconfig.json]
 ```
 {
@@ -119,8 +119,8 @@ ts-loader => tsconfig.json 설명
   ]
 }
 ```
-
-[index.tsx]
+  
+[index.tsx]  
 ```
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -136,8 +136,8 @@ ReactDOM.render(
 );
 registerServiceWorker();
 ```
-
-[App.tsx]
+  
+[App.tsx]  
 ```
 import * as React from 'react';
 import './App.css';
