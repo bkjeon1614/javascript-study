@@ -1,7 +1,7 @@
 # Update와 Delete
 
 ## 업데이트 기능 구현
-src/component/CreateContent.js를 복사하여 UpdateContent.js 로 생성한다.
+src/component/CreateContent.js를 복사하여 UpdateContent.js 로 생성한다.  
 [UpdateContent.js]
 ```
 import React, { Component } from 'react';
@@ -38,7 +38,7 @@ class UpdateContent extends Component {
 export default UpdateContent;
 ```
 
-App.js에서 UpdateContent를 사용하기 위해서 mode에 Update관련 로직을 추가를 해준다.
+App.js에서 UpdateContent를 사용하기 위해서 mode에 Update관련 로직을 추가를 해준다.  
 [App.js]
 ```
 import React, { Component } from 'react';
@@ -138,7 +138,7 @@ class App extends Component {
 export default App;
 ```
 
-App.js의 중복코드를 getContent라는 함수로 쪼개서 render 함수쪽을 간결하게 만들어보자.
+App.js의 중복코드를 getContent라는 함수로 쪼개서 render 함수쪽을 간결하게 만들어보자.  
 [App.js]
 ```
 import React, { Component } from 'react';
@@ -244,7 +244,7 @@ class App extends Component {
 export default App;
 ```
 
-UpdateContent Component가 실행될때 선택된 content id값의 component데이터를 UpdateContent Component에 주입시켜보자.
+UpdateContent Component가 실행될때 선택된 content id값의 component데이터를 UpdateContent Component에 주입시켜보자.  
 [App.js]
 ```
 import React, { Component } from 'react';
@@ -363,7 +363,7 @@ class App extends Component {
 export default App;
 ```
 
-[UpdateContent.js]
+[UpdateContent.js]  
 ```
 import React, { Component } from 'react';
 
@@ -400,7 +400,7 @@ class UpdateContent extends Component {
 export default UpdateContent;
 ```
 
-그 다음 페이지에서 update를 클릭하고 console.log를 출력하면 UpdateContent에 주입된 데이터를 확인할 수 있다.
+그 다음 페이지에서 update를 클릭하고 console.log를 출력하면 UpdateContent에 주입된 데이터를 확인할 수 있다.  
 ![reactjs-6-1](./img/reactjs-6-1.PNG)
 
 
@@ -408,7 +408,7 @@ export default UpdateContent;
 참고: [Form Document](https://reactjs.org/docs/forms.html)  
 UpdateContent Compoent에 props로 들어온 데이터를 state를 만들고 form과 동기화시킨다.
 
-UpdateContent의 데이터를 내용에 세팅하는 코드를 작성하자.
+UpdateContent의 데이터를 내용에 세팅하는 코드를 작성하자.  
 [UpdateContent.js]
 ```
 import React, { Component } from 'react';
@@ -476,7 +476,7 @@ class UpdateContent extends Component {
 export default UpdateContent;
 ```
 
-UpdateContent Component의 공통 코드인 onChange 내용을 함수로 만들어 간결하게 만들어주자.
+UpdateContent Component의 공통 코드인 onChange 내용을 함수로 만들어 간결하게 만들어주자.  
 [UpdateContent.js]
 ```
 import React, { Component } from 'react';
@@ -545,7 +545,7 @@ export default UpdateContent;
 
 
 ## UpdateContent Compoent에 식별자 생성
-id 식별자 추가하고 onSubmit에 id값을 추가한다.
+id 식별자 추가하고 onSubmit에 id값을 추가한다.  
 [UpdateContent.js]
 ```
 import React, { Component } from 'react';
@@ -611,7 +611,7 @@ class UpdateContent extends Component {
 export default UpdateContent;
 ```
 
-App.js의 UpdateContent에서 onSubmit이 실행될 때 코드를 변경하자.
+App.js의 UpdateContent에서 onSubmit이 실행될 때 코드를 변경하자.  
 [App.js]
 ```
 import React, { Component } from 'react';
@@ -729,8 +729,8 @@ export default App;
 
 
 ## Delete 구현
-Delete 기능을 구현해보자. Delete 버튼은 Control Component에 위치한다.
-
+Delete 기능을 구현해보자. Delete 버튼은 Control Component에 위치한다.  
+  
 [App.js]
 ```
 import React, { Component } from 'react';
