@@ -73,7 +73,7 @@ props는 사용자가 Component를 사용하는 입장에서 중요하며 state�
 
 ## state props와 render의 활용한 event개념 맛보기
 state를 여러개의 값을 사용했을때의 사용법을 알아보자.
-
+  
 [App.js]
 ```
     import React, { Component } from 'react';
@@ -107,7 +107,7 @@ state를 여러개의 값을 사용했을때의 사용법을 알아보자.
 ```
 위의 코드에서 PageNav 안에있는 데이터를 App의 내부 state를 PageNav에 주입해주는 것을 통해서 자동으로 데이터가 변경되게 할 것이다.
 
-먼저 App.js에 아래와 같이 state에 contents를 추가하고 PageNav에 data={this.state.contents}를 작성하자.
+먼저 App.js에 아래와 같이 state에 contents를 추가하고 PageNav에 data={this.state.contents}를 작성하자.  
 [App.js]
 ```
     import React, { Component } from 'react';
@@ -145,7 +145,7 @@ state를 여러개의 값을 사용했을때의 사용법을 알아보자.
     export default App;
 ```
 
-그 다음 PageNav.js에 list를 표시해주는 코드를 작성하자.
+그 다음 PageNav.js에 list를 표시해주는 코드를 작성하자.  
 [PageNav.js]
 ```
     import React, { Component } from 'react';
