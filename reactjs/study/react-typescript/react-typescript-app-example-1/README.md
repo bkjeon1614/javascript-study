@@ -85,7 +85,7 @@
   - react-dom, @types/react-dom
 
 ### webpack.config.js 설정
-Sample로 되어있는 webpack을 설정하는 내용에 대해 확인해보자.
+Sample로 되어있는 webpack을 설정하는 내용에 대해 확인해보자.  
 [프로젝트구조]
 ```
     react-typescript-app-example-1
@@ -103,7 +103,7 @@ Sample로 되어있는 webpack을 설정하는 내용에 대해 확인해보자.
     ├── webpack.config.js
     └── yarn.lock
 ```
-
+  
 [webpack.config.js]
 ```
   // input 설정
@@ -153,7 +153,7 @@ Sample로 되어있는 webpack을 설정하는 내용에 대해 확인해보자.
 
 ts-loader만 쓰면 어떻게 컴파일되는지 알 수 없으므로 tsconfig.json을 넣어주어야 한다. tsconfig.json의 내용은 최소설정이 되어있고 원하는 기능을 넣어서 세팅하면 된다. (공식홈페이지에 내용이 있다.)  
 
-tslint.json: ts-lint-loader를 돌릴 때 어떤 규칙에 맞게 lint를 처리해줄건지 적어놓는다.
+tslint.json: ts-lint-loader를 돌릴 때 어떤 규칙에 맞게 lint를 처리해줄건지 적어놓는다.  
 [tslint.json]
 ```
   {
