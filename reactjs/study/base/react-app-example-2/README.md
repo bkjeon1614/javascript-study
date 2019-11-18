@@ -57,7 +57,7 @@ public/ 경로에 example.html 라는 파일을 생성하여 코드를 아래와
 위와 같이 사용자 정의 태그를 지정한 것 처럼 기능을 단위별로 캡슐화하는 리액트의 기본 단위는 **컴포넌트** 라고 한다. 즉, 사용자가 보는 뷰는 컴포넌트들을 조합하여 만든다.
 
 
-## 컴포넌트 만들기 개념
+## 컴포넌트 만들기 개념  
 [public/example.html]
 ```
     <html>
@@ -148,7 +148,7 @@ public/ 경로에 example.html 라는 파일을 생성하여 코드를 아래와
 
 
 ## 컴포넌트 만들기 개념 마무리
-위의 컴포넌트 만들기 개념 내용처럼 나머지 코드들도 컴포넌트화 시켜보자.
+위의 컴포넌트 만들기 개념 내용처럼 나머지 코드들도 컴포넌트화 시켜보자.  
 [src/App.js]
 ```
     ...
@@ -205,7 +205,8 @@ props는 부모 Component가 자식 Component에게 주는 값이다. 즉, 자�
 ```
 이렇게 될 경우 똑같은 내용을 두 번 표시하게 된다. 여기서 PageHeader title="제목1" subTitle="제목2" 이런식으로 지정하여 원하는 내용으로 변경되어 표시하고 싶게 하려면 props 기술을 사용하면 된다.
 
-먼저 PageHeader title="제목1" subTitle="제목2" 태그에서 title, subTitle에 입력된 내용을 PageHeader Component가 알아내서 표시해줘야 한다. 그때 사용하기로 약속된 [JSX](https://reactjs.org/docs/components-and-props.html)의 기호를 사용하여 아래와 같이 PageHeader Component를 변경하자 [App.js]
+먼저 PageHeader title="제목1" subTitle="제목2" 태그에서 title, subTitle에 입력된 내용을 PageHeader Component가 알아내서 표시해줘야 한다. 그때 사용하기로 약속된 [JSX](https://reactjs.org/docs/components-and-props.html)의 기호를 사용하여 아래와 같이 PageHeader Component를 변경하자   
+[App.js]
 ```
     class PageHeader extends Component {
         render() {
@@ -235,7 +236,7 @@ props는 부모 Component가 자식 Component에게 주는 값이다. 즉, 자�
 
 > PageHeader title="Title Example" subTitle="Sub Title Example" 에서 title, subTitle을 변경하면 변경된 값으로 페이지에 표시되는 내용이 변경되는 부분을 확인할 수 있다.  
 
-다른 컴포넌트에도 적용해보자.
+다른 컴포넌트에도 적용해보자.  
 [App.js]
 ```
     class PageArticle extends Component {
@@ -280,7 +281,7 @@ Debugging: React App을 개발할 때 상태를 확인할 수 있다.
 App.js에는 이전에 작업하였던 여러가지의 Component가 선언되어있다. 그런데 만약 이러한 Component들이 엄청나게 많이 존재한다면 관리하기 힘들어진다. 그러므로 각각의 Component별 별도의 파일로 분리시키자.
   
 먼저 src/components라는 폴더를 생성하자. 그리고 그 안에 PageNav.js를 생성하고 App.js에 있는 PageNav Component를 PageNav.js내용에 붙여넣자.
-
+  
 [components/PageNav.js]
 ```
     import React, { Component } from 'react';
@@ -303,7 +304,7 @@ App.js에는 이전에 작업하였던 여러가지의 Component가 선언되어
 ```
 위의 export default PageNav는 PageNav.js를 가져다 쓰는 쪽에서 PageNav라는 class를 가져다 사용할 수 있게 한다.
 
-그럼 이제 위의 class를 갖다 쓰려면 아래 코드와 같이 App.js에서 import를 해주면 분리가 완료된 것이다.
+그럼 이제 위의 class를 갖다 쓰려면 아래 코드와 같이 App.js에서 import를 해주면 분리가 완료된 것이다.  
 [App.js]
 ```
     import React, { Component } from 'react';
@@ -311,7 +312,7 @@ App.js에는 이전에 작업하였던 여러가지의 Component가 선언되어
     ...
 ```
 
-다른 Component들도 적용시켜보자.
+다른 Component들도 적용시켜보자.  
 [components/PageHeader]
 ```
     import React, { Component } from 'react';
@@ -329,7 +330,7 @@ App.js에는 이전에 작업하였던 여러가지의 Component가 선언되어
 
     export default PageHeader;
 ```
-
+  
 [components/PageArticle]
 ```
     import React, { Component } from 'react';
@@ -347,7 +348,7 @@ App.js에는 이전에 작업하였던 여러가지의 Component가 선언되어
 
     export default PageArticle;
 ```
-
+  
 [App.js]
 ```
     import React, { Component } from 'react';
