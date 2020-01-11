@@ -44,6 +44,12 @@ NPM: Nodejs로 만들어진 프로그램을 쉽게 설치하게 해주는 일종
     create-react-app .
   ```
 
+  > 만약 기본 프로젝트에 소스파일이 아무것도 없으면 아래와 같이 해보자.
+  ```
+  npm uninstall -g create-react-app
+  npx create-react-app .
+  ```
+
 - React Project 실행
   - 먼저 VS Code 상위 메뉴에서 View -> Appearance -> Show Panel을 선택하고
 터미널을 선택하면 명령어 내부적으로 설치되어있는 CMD가 실행된다.
